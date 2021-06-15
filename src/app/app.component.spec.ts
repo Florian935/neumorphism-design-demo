@@ -15,10 +15,4 @@ describe('AppComponent', () => {
         const app = fixture.componentInstance;
         expect(app).toBeTruthy();
     });
-
-    it(`should have as isActive 'false'`, () => {
-        const fixture = TestBed.createComponent(AppComponent);
-        const app = fixture.componentInstance;
-        expect(app.isActive).toEqual(false);
-    });
 });

@@ -7,10 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ButtonComponent } from './pages/button/button.component';
+import { CardComponent } from './pages/card/card.component';
 
-const MATERIALS = [MatButtonModule, MatCardModule];
+const MATERIALS = [MatButtonModule, MatCardModule, MatProgressSpinnerModule];
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, ButtonComponent, CardComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
