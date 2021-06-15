@@ -1,0 +1,211 @@
+$primary-light: #39ddfa;
+$primary: #00abdf;
+$primary-dark: #008ada;
+$white: #fff;
+$greyLight-1: #ebf5fc;
+$greyLight-2: #d5e0f3;
+$greyLight-3: #c1d9f0;
+$greyDark: #646b8c;
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $greyLight-2;
+    padding: 2rem;
+}
+
+.card {
+    width: 34rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    background-color: $greyLight-1;
+    box-shadow: 0px 20px 30px rgba(100, 131, 177, 0.2);
+    padding: 5rem;
+    border: 1px solid #fff;
+}
+
+.card_percent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.card_number {
+    position: absolute;
+    color: $greyDark;
+    font-size: 3.6rem;
+}
+
+.card_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card_description h2 {
+    font-size: 1.8rem;
+    letter-spacing: 1.2px;
+    margin-bottom: 1rem;
+    color: $primary;
+}
+
+.card_description p {
+    font-size: 1.4rem;
+    color: $greyDark;
+}
+
+svg {
+    position: relative;
+    width: 24rem;
+    height: 24rem;
+    z-index: 1000;
+    transform: rotate(-90deg);
+}
+
+svg circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-linecap: round;
+    transform: translate(3rem, 3rem);
+    stroke-dasharray: 890.49;
+    stroke-dashoffset: 885.49;
+    transition: all 1s ease;
+    stroke-width: 24;
+}
+
+.circle {
+    position: absolute;
+    width: 23rem;
+    height: 23rem;
+    border-radius: 50%;
+    box-shadow: 6px 6px 8px $greyLight-1, -6px -6px 8px $white;
+    background-color: $greyLight-1;
+}
+
+.circle_medium {
+    width: 20.5rem;
+    height: 20.5rem;
+    box-shadow: inset 8px 8px 10px $greyLight-2, inset -4px -4px 8px $white;
+}
+
+.circle_small {
+    width: 15.5rem;
+    height: 15.5rem;
+    box-shadow: 6px 6px 8px $greyLight-2, -2px -2px 8px $white;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-items: center;
+    padding: 4rem;
+    margin-left: 4rem;
+    border-radius: 2rem;
+    background: $greyLight-1;
+    text-align: center;
+    box-shadow: 0px 20px 30px rgba(100, 131, 177, 0.2);
+    border: 1px solid $white;
+    position: relative;
+}
+
+.form-text {
+    grid-column: 1/3;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: $greyDark;
+}
+
+.form input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 5rem;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    color: $primary;
+    box-shadow: inset 0.2rem 0.2rem 0.4rem $greyLight-2,
+        inset -0.3rem -0.3rem 0.4rem $white;
+}
+
+.form input::placeholder {
+    color: $greyLight-3;
+}
+
+.form input:focus {
+    color: $primary;
+    box-shadow: 0.3rem 0.3rem 0.6rem $greyLight-3, -0.2rem -0.2rem 0.5rem $white;
+}
+
+.form_btn {
+    border: none;
+    outline: none;
+    letter-spacing: 0.8px;
+    background: $greyLight-1;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+    color: $white;
+    cursor: pointer;
+    background: linear-gradient(-25deg, $primary 0%, $primary-light 100%);
+}
+
+.form_btn:hover {
+    background: linear-gradient(-25deg, $primary-dark 0%, $primary 100%);
+}
+
+.tooltip {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: -6rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background: $greyLight-1;
+    font-size: 1.2rem;
+    color: $primary-dark;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.tooltip_text {
+    margin-left: 0.6rem;
+}
+
+.tooltip .fade-in {
+    animation: fadein 0.8s ease;
+}
+
+.tooltip:after {
+    content: "";
+    position: absolute;
+    left: 45%;
+    bottom: 74%;
+    width: 2rem;
+    height: 2rem;
+    background: $greyLight-1;
+    clip-path: polygon(0% 0%, 100%, 0% 100%);
+    transform: rotate(135deg);
+    border-radius: 0 0 0 0.4em;
+}
+
+@keyframes fadein {
+    0% {
+        transform: translateY(-40px) scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}

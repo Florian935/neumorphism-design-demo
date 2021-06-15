@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="card">
+        <div class="card_percent">
+            <svg>
+                <defs>
+                    <radialGradient
+                        id="gradient"
+                        cx="50%"
+                        cy="50%"
+                        r="60%"
+                        fx="50%"
+                        fy="50%"
+                    >
+                        <stop offset="30%" stop-color="#008ada" />
+                        <stop offset="100%" stop-color="#39ddfa" />
+                    </radialGradient>
+                </defs>
+                <circle
+                    #circle
+                    cx="144"
+                    cy="144"
+                    r="144"
+                    stroke="url(#gradient)"
+                    id="circle"
+                ></circle>
+            </svg>
+            <div class="circle"></div>
+            <div class="circle circle_medium"></div>
+            <div class="circle circle_small"></div>
+            <div class="card_number">{{ pourcentage }}%</div>
+        </div>
+        <div class="card_description">
+            <h2>Card Title</h2>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus
+                beatae unde ipsam sequi velit nihil ea! Quis beatae error dicta
+                quisquam totam expedita eligendi aperiam quo eum, fugiat
+                possimus ducimus.
+            </p>
+        </div>
+    </div>
+
+    <div class="form">
+        <h2 class="form_text">Insert a percentage</h2>
+        <input
+            #toto
+            type="text"
+            placeholder="50"
+            id="percent"
+            maxlength="3"
+            (keyup)="onKeyUp(toto)"
+        />
+        <button class="form_btn" (click)="changePercent()">Change</button>
+        <div class="tooltip">
+            <span class="material-icons">error</span>
+            <span class="tooltip_text" data-toggle>Insert a valid number</span>
+        </div>
+    </div>
+</div>

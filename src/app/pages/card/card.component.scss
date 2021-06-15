@@ -1,4 +1,4 @@
-.mat-card {
+.card {
     margin: 15px;
     background-color: #e0eafb;
     border: none;
@@ -9,5 +9,9 @@
 
     &:hover {
         box-shadow: inset 3px 3px 6px #bec8e4, inset -3px -3px 6px #fff;
+    }
+
+    .text {
+        padding: 20px;
     }
 }
