@@ -27,7 +27,7 @@
             <div class="circle"></div>
             <div class="circle circle_medium"></div>
             <div class="circle circle_small"></div>
-            <div class="card_number">{{ pourcentage }}%</div>
+            <div class="card_number">{{ percent }}%</div>
         </div>
         <div class="card_description">
             <h2>Card Title</h2>
@@ -43,14 +43,13 @@
     <div class="form">
         <h2 class="form_text">Insert a percentage</h2>
         <input
-            #toto
+            #input
             type="text"
             placeholder="50"
             id="percent"
             maxlength="3"
-            (keyup)="onKeyUp(toto)"
+            (keyup)="onChangePercent(input.value)"
         />
-        <button class="form_btn" (click)="changePercent()">Change</button>
         <div class="tooltip">
             <span class="material-icons">error</span>
             <span class="tooltip_text" data-toggle>Insert a valid number</span>
